@@ -104,13 +104,6 @@ const SaveButton = styled('button', {
   },
 });
 
-const Divider = styled('div', {
-  width: '100%',
-  height: '1px',
-  backgroundColor: '#e0e0e0',
-  margin: '$6 0',
-});
-
 export const ProfileEdit: React.FC = () => {
   const navigate = useNavigate();
   const [cities, setCities] = useState(['Mumbai', 'Pune']);

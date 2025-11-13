@@ -192,7 +192,6 @@ export const EmployeeCalendar: React.FC = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [showModal, setShowModal] = useState(false);
-  const [selectedEvent, setSelectedEvent] = useState<any>(null);
 
   const days = ['MON', 'TUE', 'WED', 'THUR', 'FRI', 'SAT', 'SUN'];
   
@@ -233,7 +232,7 @@ export const EmployeeCalendar: React.FC = () => {
   ];
 
   const handleEventClick = (event: any) => {
-    setSelectedEvent(event);
+    console.log('Event clicked:', event);
     setShowModal(true);
   };
 
@@ -269,7 +268,7 @@ export const EmployeeCalendar: React.FC = () => {
               {cell.events?.map((event) => (
                 <EventPill
                   key={event.id}
-                  color={event.color}
+                  color={event.color as 'blue' | 'lightBlue'}
                   onClick={() => handleEventClick(event)}
                 >
                   {event.label}

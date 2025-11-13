@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { styled } from '@/styles/theme';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { PlumbingLayout } from '@/components/layout/PlumbingLayout';
 
 const Container = styled('div', {
@@ -156,7 +156,6 @@ const SaveButton = styled('button', {
 
 export const ServiceEdit: React.FC = () => {
   const navigate = useNavigate();
-  const { categoryId } = useParams();
   
   const [selectedCategory, setSelectedCategory] = useState('Full House');
   const [selectedServices, setSelectedServices] = useState(['1 BHK Furnished Bungalow']);

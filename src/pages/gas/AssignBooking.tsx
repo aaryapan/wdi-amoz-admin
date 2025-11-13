@@ -225,13 +225,6 @@ const DetailSection = styled('div', {
   },
 });
 
-const DetailHeader = styled('div', {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  marginBottom: '$4',
-});
-
 const SectionTitle = styled('h3', {
   fontSize: '18px',
   fontWeight: '$semibold',
@@ -356,8 +349,6 @@ const ProviderName = styled('span', {
   color: '$text',
   fontFamily: 'Figtree, sans-serif',
 });
-
-const FeedbackSection = styled('div', {});
 
 const RatingRow = styled('div', {
   display: 'flex',

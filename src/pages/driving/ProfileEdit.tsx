@@ -310,7 +310,7 @@ export const ProfileEdit: React.FC = () => {
   const navigate = useNavigate();
   const [languages, setLanguages] = useState(['Arab', 'Hindi']);
   const [selectedDays, setSelectedDays] = useState(['Monday', 'Tuesday', 'Wednesday']);
-  const [carImages, setCarImages] = useState([
+  const [carImages] = useState([
     'https://www.figma.com/api/mcp/asset/18f22b0a-65ec-4470-806a-83f7541e2479',
     'https://www.figma.com/api/mcp/asset/1918418c-ce82-473f-8155-ca60d68fe1e3',
   ]);

@@ -83,12 +83,20 @@ const RemoveButton = styled('button', {
 });
 
 interface FileUploadProps {
-  label: string;
+  label?: string;
   value?: File | null;
-  onChange: (file: File | null) => void;
+  onChange?: (file: File | null) => void;
+  onFileSelect?: (file: File | null) => void;
+  accept?: string;
 }
 
-export const FileUpload: React.FC<FileUploadProps> = ({ label, value, onChange }) => {
+export const FileUpload: React.FC<FileUploadProps> = ({ 
+  label, 
+  value, 
+  onChange, 
+  onFileSelect,
+  accept = ".pdf,.jpg,.jpeg,.png" 
+}) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
@@ -97,12 +105,14 @@ export const FileUpload: React.FC<FileUploadProps> = ({ label, value, onChange }
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
-    onChange(file);
+    onChange?.(file);
+    onFileSelect?.(file);
   };
 
   const handleRemove = (e: React.MouseEvent) => {
     e.stopPropagation();
-    onChange(null);
+    onChange?.(null);
+    onFileSelect?.(null);
     if (inputRef.current) {
       inputRef.current.value = '';
     }
@@ -110,7 +120,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({ label, value, onChange }
 
   return (
     <UploadContainer>
-      <Label>{label}</Label>
+      {label && <Label>{label}</Label>}
       {value ? (
         <UploadedFile>
           <DocIcon viewBox="0 0 24 24" fill="currentColor">
@@ -138,7 +148,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({ label, value, onChange }
         type="file"
         style={{ display: 'none' }}
         onChange={handleFileChange}
-        accept=".pdf,.jpg,.jpeg,.png"
+        accept={accept}
       />
     </UploadContainer>
   );

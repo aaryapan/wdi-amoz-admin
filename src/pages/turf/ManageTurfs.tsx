@@ -285,11 +285,6 @@ export const ManageTurfs: React.FC = () => {
                   <TableCell>
                     <Toggle
                       active={turf.available}
-                      style={{
-                        '&::after': {
-                          left: turf.available ? '26px' : '2px',
-                        },
-                      }}
                     />
                   </TableCell>
                   <TableCell>

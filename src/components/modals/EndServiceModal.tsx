@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { styled } from '@/styles/theme';
 
 const Overlay = styled('div', {
@@ -100,8 +100,6 @@ interface EndServiceModalProps {
 }
 
 export const EndServiceModal: React.FC<EndServiceModalProps> = ({ onClose }) => {
-  const [files, setFiles] = useState<FileList | null>(null);
-
   const handleEnd = () => {
     // End service logic - timer stops here, duration calculated
     onClose();
@@ -121,7 +119,7 @@ export const EndServiceModal: React.FC<EndServiceModalProps> = ({ onClose }) => 
             type="file"
             accept="image/*,video/*"
             multiple
-            onChange={(e) => setFiles(e.target.files)}
+            onChange={() => {/* file upload handler */}}
           />
         </UploadArea>
 

@@ -12,12 +12,6 @@ import type {
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.example.com';
 
-interface OnboardingState {
-  email?: string;
-  phone?: string;
-  token?: string;
-}
-
 export const onboardingApi = createApi({
   reducerPath: 'onboardingApi',
   baseQuery: fetchBaseQuery({

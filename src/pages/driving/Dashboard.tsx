@@ -272,11 +272,6 @@ const ChartContainer = styled('div', {
   marginTop: '$6',
 });
 
-const ChartGrid = styled('div', {
-  position: 'absolute',
-  inset: '60px 40px 40px 90px',
-});
-
 const YAxisLabels = styled('div', {
   position: 'absolute',
   left: '30px',

@@ -239,11 +239,6 @@ export const DiscountManagement: React.FC = () => {
                   <TableCell>
                     <Toggle
                       active={discount.active}
-                      style={{
-                        '&::after': {
-                          left: discount.active ? '26px' : '2px',
-                        },
-                      }}
                     />
                   </TableCell>
                   <TableCell>

@@ -254,9 +254,6 @@ export const EmployeeEdit: React.FC = () => {
   const [email, setEmail] = useState('example@email.com');
   const [selectedCategories, setSelectedCategories] = useState(['Car Cleaning', 'Bike Cleaning']);
   const [experience, setExperience] = useState('4');
-  const [passportFile, setPassportFile] = useState<File | null>(null);
-  const [certFile, setCertFile] = useState<File | null>(null);
-  const [residentialFile, setResidentialFile] = useState<File | null>(null);
   const [expiryDate, setExpiryDate] = useState('');
 
   const handleRemoveCategory = (category: string) => {
@@ -388,7 +385,7 @@ export const EmployeeEdit: React.FC = () => {
             <DocumentUploadSection>
               <DocumentLabel>Upload Passport</DocumentLabel>
               <FileUpload
-                onFileSelect={(file) => setPassportFile(file)}
+                onFileSelect={() => {/* file handler */}}
                 accept="image/*,.pdf"
               />
             </DocumentUploadSection>
@@ -396,7 +393,7 @@ export const EmployeeEdit: React.FC = () => {
             <DocumentUploadSection>
               <DocumentLabel>Past certification (optional)...</DocumentLabel>
               <FileUpload
-                onFileSelect={(file) => setCertFile(file)}
+                onFileSelect={() => {/* file handler */}}
                 accept="image/*,.pdf"
               />
             </DocumentUploadSection>
@@ -404,7 +401,7 @@ export const EmployeeEdit: React.FC = () => {
             <DocumentUploadSection>
               <DocumentLabel>Upload Residential ID</DocumentLabel>
               <FileUpload
-                onFileSelect={(file) => setResidentialFile(file)}
+                onFileSelect={() => {/* file handler */}}
                 accept="image/*,.pdf"
               />
             </DocumentUploadSection>

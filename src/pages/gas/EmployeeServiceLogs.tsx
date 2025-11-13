@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@/styles/theme';
 import { GasLayout } from '@/components/layout/GasLayout';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Breadcrumb = styled('div', {
   display: 'flex',
@@ -129,7 +129,6 @@ const FeedbackButton = styled('button', {
 
 export const EmployeeServiceLogs: React.FC = () => {
   const navigate = useNavigate();
-  const { id } = useParams();
 
   const logs = [
     { srNo: '01', bookingId: '847552', customerName: 'K Adam', date: '07/10/2024', time: '9:00 AM', rating: 4.3 },

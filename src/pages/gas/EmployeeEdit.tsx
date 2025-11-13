@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { styled } from '@/styles/theme';
 import { GasLayout } from '@/components/layout/GasLayout';
 import { useNavigate, useParams } from 'react-router-dom';

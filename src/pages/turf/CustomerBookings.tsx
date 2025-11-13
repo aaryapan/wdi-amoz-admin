@@ -425,11 +425,6 @@ export const CustomerBookings: React.FC = () => {
                     <Toggle
                       active={markComplete}
                       onClick={() => setMarkComplete(!markComplete)}
-                      style={{
-                        '&::after': {
-                          left: markComplete ? '26px' : '2px',
-                        },
-                      }}
                     />
                   </ToggleContainer>
                 )}
@@ -446,7 +441,7 @@ export const CustomerBookings: React.FC = () => {
                   <strong>Name:</strong> Sam Tek
                 </DetailText>
                 <DetailText style={{ display: 'flex', alignItems: 'center', gap: '$2' }}>
-                  <ClockIcon /> 4:00 PM <CalendarIcon /> 02/12/2024 <MapPinIcon style={{ marginLeft: '$2' }} /> 2 Hrs
+                  <ClockIcon /> 4:00 PM <CalendarIcon /> 02/12/2024 <MapPinIcon /> 2 Hrs
                 </DetailText>
               </DetailBox>
             </DetailSection>
@@ -458,7 +453,7 @@ export const CustomerBookings: React.FC = () => {
                   <strong>Turf Name:</strong> Be Sporty Turf
                 </DetailText>
                 <DetailText>
-                  <MapPinIcon style={{ display: 'inline-block', marginRight: '$1' }} /> P.O.Box 19, Khimji's Bait Al Ahlam, Al Noor St,Ruwi,Muscat
+                  <MapPinIcon /> P.O.Box 19, Khimji's Bait Al Ahlam, Al Noor St,Ruwi,Muscat
                 </DetailText>
                 <DetailRow style={{ marginTop: '$3' }}>
                   <div>

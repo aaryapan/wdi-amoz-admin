@@ -186,7 +186,7 @@ const TrashIcon = () => (
 export const ManageAddOns: React.FC = () => {
   const navigate = useNavigate();
   const [showAddModal, setShowAddModal] = useState(false);
-  const [addOns, setAddOns] = useState([
+  const [addOns, setAddOns] = useState<Array<{ srNo: string; image: string | null; name: string; price: string; quantity: string }>>([
     { srNo: '01', image: null, name: 'K Adam', price: 'OMR 100', quantity: '10' },
   ]);
 

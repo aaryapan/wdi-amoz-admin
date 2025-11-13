@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { styled } from '@/styles/theme';
 import { useNavigate } from 'react-router-dom';
 
@@ -110,7 +110,6 @@ const ChevronDownIcon = () => (
 
 export const GasHeader: React.FC<GasHeaderProps> = ({ title }) => {
   const navigate = useNavigate();
-  const [showNotifications, setShowNotifications] = useState(false);
 
   const handleNotificationClick = () => {
     navigate('/gas/notifications');

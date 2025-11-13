@@ -314,7 +314,7 @@ export const BookingsCalendar: React.FC = () => {
             {timeSlots.map((time, timeIndex) => (
               <React.Fragment key={timeIndex}>
                 <TimeSlot isTimeLabel>{time}</TimeSlot>
-                {days.map((day, dayIndex) => (
+                {days.map((_day, dayIndex) => (
                   <TimeSlot key={`${timeIndex}-${dayIndex}`}>
                     {bookings
                       .filter(b => b.day === dayIndex && Math.floor(b.startHour) === timeIndex)

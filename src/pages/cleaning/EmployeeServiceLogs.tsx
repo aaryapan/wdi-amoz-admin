@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { styled } from '@/styles/theme';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CleaningLayout } from '@/components/layout/CleaningLayout';
 
 const Container = styled('div', {
@@ -175,7 +175,6 @@ interface ServiceLog {
 
 export const EmployeeServiceLogs: React.FC = () => {
   const navigate = useNavigate();
-  const { id } = useParams();
   const [searchQuery, setSearchQuery] = useState('');
 
   const serviceLogs: ServiceLog[] = [

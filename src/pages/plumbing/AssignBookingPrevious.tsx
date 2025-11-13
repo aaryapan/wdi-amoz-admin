@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { styled } from '@/styles/theme';
+import { useNavigate } from 'react-router-dom';
 import { PlumbingLayout } from '@/components/layout/PlumbingLayout';
 
 const Container = styled('div', {
@@ -371,6 +372,7 @@ const CustomerMeta = styled('div', {
 });
 
 export const AssignBookingPrevious: React.FC = () => {
+  const navigate = useNavigate();
   const [selectedBookingId, setSelectedBookingId] = useState('#589654');
   const [acceptanceFilter, setAcceptanceFilter] = useState('all');
   const [assignmentFilter, setAssignmentFilter] = useState('all');

@@ -372,10 +372,6 @@ const DocumentLink = styled('div', {
   },
 });
 
-const ImagesSection = styled('div', {
-  marginTop: '$4',
-});
-
 const ImagesLabel = styled('p', {
   fontSize: '14px',
   color: '$textLight',
@@ -759,10 +755,10 @@ export const BookingManagement: React.FC = () => {
               </DetailRow>
               <DetailRow>
                 <span className="label">
-                  <ClockIcon style={{ display: 'inline', width: '16px', height: '16px', marginRight: '4px' }} /> {selectedBooking.durationDays}
+                  <ClockIcon /> {selectedBooking.durationDays}
                 </span>
                 <span className="value">
-                  <CalendarSmallIcon style={{ display: 'inline', width: '16px', height: '16px', marginRight: '4px' }} /> 02/12/2024 - 09/12/2024
+                  <CalendarSmallIcon /> 02/12/2024 - 09/12/2024
                 </span>
               </DetailRow>
             </Section>

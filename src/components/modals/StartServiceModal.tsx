@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { styled } from '@/styles/theme';
 
 const Overlay = styled('div', {
@@ -100,8 +100,6 @@ interface StartServiceModalProps {
 }
 
 export const StartServiceModal: React.FC<StartServiceModalProps> = ({ onClose }) => {
-  const [files, setFiles] = useState<FileList | null>(null);
-
   const handleStart = () => {
     // Start service logic - timer starts here
     onClose();
@@ -121,7 +119,7 @@ export const StartServiceModal: React.FC<StartServiceModalProps> = ({ onClose })
             type="file"
             accept="image/*,video/*"
             multiple
-            onChange={(e) => setFiles(e.target.files)}
+            onChange={() => {/* file upload handler */}}
           />
         </UploadArea>
 

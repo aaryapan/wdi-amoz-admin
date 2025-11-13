@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@/styles/theme';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CleaningLayout } from '@/components/layout/CleaningLayout';
 
 const Container = styled('div', {
@@ -219,7 +219,6 @@ const StaffName = styled('div', {
 
 export const ServiceView: React.FC = () => {
   const navigate = useNavigate();
-  const { categoryId, serviceId } = useParams();
 
   const staff = [
     { srNo: '01', name: 'John Adam', avatar: 'https://www.figma.com/api/mcp/asset/b8706651-9209-4495-b9f9-de86319eac21' },

@@ -106,7 +106,6 @@ const CallButton = styled('button', {
   width: '40px',
   height: '40px',
   borderRadius: '50%',
-  border: 'none',
   backgroundColor: '$white',
   border: '1px solid #E0E0E0',
   cursor: 'pointer',

@@ -97,16 +97,9 @@ interface SelectVehicleModalProps {
   onSelect: (category: string, vehicleId: string) => void;
 }
 
-export const SelectVehicleModal: React.FC<SelectVehicleModalProps> = ({ onClose, onSelect }) => {
+export const SelectVehicleModal: React.FC<SelectVehicleModalProps> = ({ onClose }) => {
   const [category, setCategory] = useState('');
   const [vehicleId, setVehicleId] = useState('');
-
-  const handleSubmit = () => {
-    if (category && vehicleId) {
-      onSelect(category, vehicleId);
-      onClose();
-    }
-  };
 
   return (
     <Overlay onClick={onClose}>
